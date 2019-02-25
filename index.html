@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Dice Roller</title>
+    <!-- This section contains the actual programming that does the rolling
+    It consists of one javascript function that reads the HTML and randomizes the rolls
+-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="rolling.js"></script>
+</head>
+
+<!-- and finally we have the HTML itself, the content. -->
+
+<body>
+    <div class="content">
+        <h1>Dice Roller</h1>
+        <div class="flexBox">
+            <div class="sidebar">
+                <button style="font-size:2rem;" onclick="rolldice()">Roll!</button>
+                <Br>
+
+                <input type=checkbox id="animateCheck" checked=true>
+                <label for="animateCheck">Animate dice?</label>
+                <br>
+                <!--                <p>
+                    <input type=checkbox id="userandomorg" value=false>
+                    <label for="userandomorg">Use 'true' random numbers?
+                        <br>(requires internet)</label>
+                </p>
+            -->
+                <p>
+                    <label for="numDice">Number of Dice:</label>
+                    <br>
+                    <input type="number" value="2" min="1" max="1000" title="Number of dice" id="numDice">
+                </p>
+                <p>
+                    <label for="sideList">Values on each die
+                        <br> (one per line)</label>
+                    <br>
+                    <div id="sideListWrapper">
+                        <textarea id="sideList">one
+two
+3
+FOUR
+cinco
+half-dozen</textarea> </div>
+                </p>
+            </div>
+            <div class="mainbar">
+                <h3>Outcomes</h3>
+                <div class="flexBox">
+                    <div id="outcomes" class="sidebar">
+                    </div>
+                    <div class="mainbar">
+                        <div class="flexBox wrap" id="animations">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        TLN.append_line_numbers("sideList");
+    </script>
+</body>
+
+</html>
